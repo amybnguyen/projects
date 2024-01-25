@@ -12,7 +12,6 @@ pen = Pen()
 data = pandas.read_csv("50_states.csv")
 states_list = data.state.to_list()
 guessed_states = []
-missed_states = []
 
 
 while len(guessed_states) < 50:
@@ -20,6 +19,9 @@ while len(guessed_states) < 50:
     answer_state = answer_state.title()
 
     if answer_state == "Exit":
+        missed_states = [state for state in states_list if state not in guessed_states]
+        df = pandas.DataFrame(missed_states)
+        df.to_csv("states_to_learn.csv")
         break
 
     if answer_state in states_list and answer_state not in guessed_states:
@@ -32,14 +34,6 @@ while len(guessed_states) < 50:
 
 if len(guessed_states) == 50:
     pen.win()
-
-# states_to_learn.csv
-for state in states_list:
-    if state not in guessed_states:
-        missed_states.append(state)
-
-    df = pandas.DataFrame(missed_states)
-    df.to_csv("states_to_learn.csv")
 
 
 screen.exitonclick()
