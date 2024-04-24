@@ -1,0 +1,10 @@
+﻿{
+	"Name": "BirthdayToday",
+	"Author": "discorex",
+	"Version": "2.0.0",
+	"Description": "Displays HUD message upon an NPC's birthday. Also prints NPC's gift tastes to the log.",
+	"UniqueID": "discorex.BirthdayToday",
+	"EntryDll": "BirthdayToday.dll",
+	"MinimumApiVersion": "3.0.0",
+	"UpdateKeys": []
+}
