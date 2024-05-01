@@ -1,0 +1,36 @@
+{
+  "money": 0,
+  "moneyPerSecond": 0,
+  "upgrades": {
+    "finger": {
+      "own": 0,
+      "cost": 10,
+      "increaseMPSBy": 0.1
+    },
+    "espressoMachine": {
+      "own": 0,
+      "cost": 100,
+      "increaseMPSBy": 1
+    },
+    "nintendo": {
+      "own": 0,
+      "cost": 1000,
+      "increaseMPSBy": 10
+    },
+    "mountainDew": {
+      "own": 0,
+      "cost": 10000,
+      "increaseMPSBy": 100
+    },
+    "desperation": {
+      "own": 0,
+      "cost": 100000,
+      "increaseMPSBy": 1000
+    },
+    "singer": {
+      "own": 0,
+      "cost": 1000000,
+      "increaseMPSBy": 10000
+    }
+  }
+}
