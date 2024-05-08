@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Single view
+{% endblock %}
+
+{% block main %}
+    <!-- Date, image, caption -->
+    <form action="/action_page.php">
+        <input type="file" id="myFile" name="filename">
+        <input type="submit">
+    </form>
+{% endblock %}

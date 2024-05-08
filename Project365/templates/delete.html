@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Delete
+{% endblock %}
+
+{% block main %}
+    <form class="mb-3" action="\delete" method="POST">
+        <div class="mb-3">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+        </div>
+        <button class="button" type="submit">Delete</button>
+    </form>
+
+{% endblock %}

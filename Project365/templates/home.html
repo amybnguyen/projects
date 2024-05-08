@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <!-- <button onclick="organize()">Organize</button>
+    <form class="mb-3" action="\upload" method="POST" enctype="multipart/form-data">
+    <button onclick="delete()">Delete</button>
+    </form> -->
+
+    {% for row in database %}
+    <div align-items="center" justify-content="center" class="wrapper">
+            <div>
+                <img src="{{ row['filepath'] }} " alt="{{ row['caption'] }}" class="instax-photo">
+            </div>
+            <div>
+                <figcurecaption class="instax-caption">{{ row['date'] }}</figcurecaption>
+            </div>
+            <div>
+                <figcurecaption class="instax-caption">{{ row['caption'] }}</figcurecaption>
+            </div>
+        </div>
+    {% endfor %}
+
+<script>
+    function organize() {
+        var x = document.getElementsByClassName("checkbox");
+        if (x.style.display === "none") {
+        x.style.display = "block";
+        } else {
+        x.style.display = "none";
+        }
+    }
+</script>
+{% endblock %}
